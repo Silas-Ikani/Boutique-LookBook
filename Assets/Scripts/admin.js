@@ -75,3 +75,17 @@ function editItem(index) {
 
   deleteItem(index); // remove the original so the form resubmits as new
 }
+
+// Live image preview
+const imageInput = document.getElementById("item-image");
+const imagePreview = document.getElementById("image-preview");
+
+imageInput.addEventListener("input", () => {
+  const url = imageInput.value.trim();
+  if (url && (url.startsWith("http://") || url.startsWith("https://"))) {
+    imagePreview.src = url;
+    imagePreview.style.display = "block";
+  } else {
+    imagePreview.style.display = "none";
+  }
+});

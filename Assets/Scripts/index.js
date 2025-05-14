@@ -41,7 +41,7 @@ inventoryItems.forEach(item => {
       <h5 class="fw-semibold">${item.name}</h5>
       <span class="status ${status.class} mb-2">${status.text}</span>
       <a href="${item.link}" target="_blank" class="btn btn-dark mt-auto" ${item.status === "sold-out" ? "disabled" : ""}>
-        ${item.status === "sold-out" ? "Unavailable" : "Buy Now"}
+        ${item.status === "sold-out" ? "Unavailable" : "Buy Now <i class='fab fa-whatsapp'></i>"}
       </a>
     </div>
   `;

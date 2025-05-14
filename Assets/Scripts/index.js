@@ -1,20 +1,20 @@
 // Replace this later with real JSON or API
-const inventoryItems = [
+const inventoryItems = JSON.parse(localStorage.getItem("lookbookItems")) || [
   {
-    name: "Satin Slip Dress",
-    image: "assets/images/dress1.jpg",
+    name: "T-Shirt",
+    image: "Assets/Img/Gray T-Shirt Display.jpeg",
     status: "in-stock",
-    link: "https://wa.me/2348000000000?text=I'm%20interested%20in%20the%20Satin%20Slip%20Dress"
+    link: "https://wa.me/2347052814252?text=I'm%20interested%20in%20the%20Gray%20T-Shirt"
   },
   {
-    name: "Floral Kimono",
-    image: "assets/images/dress2.jpg",
+    name: "White Hoodie",
+    image: "Assets/Img/Minimalist White Hoodie.jpeg",
     status: "low-stock",
-    link: "https://wa.me/2348000000000?text=I'd%20like%20to%20order%20the%20Floral%20Kimono"
+    link: "https://wa.me/2348000000000?text=I'd%20like%20to%20order%20the%20White%20Hoodie"
   },
   {
-    name: "Denim Wrap Skirt",
-    image: "assets/images/skirt1.jpg",
+    name: "Sneakers...",
+    image: "Assets/Img/White Sneakers.jpg",
     status: "sold-out",
     link: "#"
   }

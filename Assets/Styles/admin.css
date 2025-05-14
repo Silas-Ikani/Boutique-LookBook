@@ -1,0 +1,67 @@
+body {
+    font-family: 'poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+h2, h4 {
+    margin-bottom: 10px;
+}
+
+input, select, button {
+    display: block;
+    margin: 8px 0;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #222;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+button:hover {
+    background-color: #444;
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #eee;
+}
+
+td button {
+    margin-right: 8px;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+}
+td button:first {
+    background-color: #007bff;
+    color: #fff;
+}
+
+td button:last-child {
+    background-color: #dc3545;
+    color: #fff;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Boutique | Smart Lookbook</title>
+    <link rel="stylesheet" href="./Assets/Styles/all.min.css" />
+    <link rel="stylesheet" href="./Assets/Styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="./Assets/Styles/index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="bg-white shadow-sm sticky-top">
+      <nav class="container d-flex justify-content-between align-items-center py-3">
+        <div class="logo">
+          <h1 class="m-0">WEARZ</h1>
+          <!-- <img src="" alt=""> -->
+        </div>
+        <ul class="nav">
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item">
+            <a href="#lookbook" class="nav-link">Lookbook</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero-section py-5 text-center">
+      <div class="container">
+        <h2 class="display-5 fw-bold">Style in Stock. Always.</h2>
+        <p class="lead">
+          Browse current pieces, check availability, and buy via WhatsApp in one
+          tap.
+        </p>
+        <a href="#lookbook" class="btn btn-dark mt-3">Explore Lookbook</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about-section py-5">
+      <div class="container">
+          <div class="row align-items-center gx-4 py-5">
+            <div class="col-md-6">
+                <h3 class="mb-3">
+                    About Us
+                    <span class="underline"></span>
+                </h3>
+                <p>
+                    [Boutique Name] is your visual guide to style. 
+                    Browse our constantly updated lookbook for outfit ideas and the latest trends, all available to shop directly.
+                </p>
+                <p>
+                    Discover your next favorite outfit with [Boutique Name]'s interactive lookbook. We've created a visual journey through our latest collections, 
+                making it easy to find inspiration and shop the looks you love. We're passionate about bringing you the best in fashion, styled for real life.
+                </p>
+                <a href="#contact" class="btn look-btn rounded-3">Shop Now</a>
+            </div>
+            <div class="col-md-6">
+                <img src="./Assets/Img/about-img.jpg" alt="About" class="img-fluid rounded-5"/>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOOKBOOK -->
+    <section id="lookbook" class="bg-light py-5 mb-4">
+      <div class="container">
+        <h3 class="text-center mb-4">
+            Lookbook
+            <span class="underline mx-auto"></span>
+        </h3>
+        <div class="row g-4" id="inventory-grid">
+          <!-- JS will inject cards here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-5">
+      <div class="container">
+        <h3 class="text-center mb-5">
+            Contact / Visit Us
+            <span class="underline mx-auto"></span>
+        </h3>
+        <div class="row">
+          <div class="col-md-6">
+            <p><strong>Address:</strong> 123 Fashion Avenue, Lagos</p>
+            <p><strong>Hours:</strong> Mon–Sat: 10AM – 7PM</p>
+            <p><strong>Phone:</strong> +234 800 000 0000</p>
+            <p><strong>Instagram:</strong> @yourboutique</p>
+          </div>
+          <div class="col-md-6">
+            <iframe src="https://maps.google.com/maps?q=lagos&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="200" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center bg-dark text-white py-3">
+      <small>&copy; 2025 Your Boutique. All rights reserved.</small>
+    </footer>
+
+    <!-- BOOTSTRAP & JS -->
+    <script src="./Assets/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="./Assets/Scripts/index.js"></script>
+  </body>
+</html>

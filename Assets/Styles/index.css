@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Navbar */
+.nav-link {
+    color: #333;
+    margin-left: 1.2rem;
+    font-weight: 500;
+    position: relative;
+}
+.nav-link:hover {
+  color: #c89970;
+}
+.nav-link::after {
+  content: '';
+  width: 0;
+  height: 4px;
+  background: #c89970;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url(../Img/BG.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+    min-height: 79vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    /* Filter */
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.look-btn {
+    background-color: #000;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+.look-btn:hover {
+    background-color: #c89970;
+    color: #fff;
+}
+
+/* About section */
+.about-section img {
+    width: 450px;
+}
+.underline {
+    display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #c89970;
+  margin-top: 0.5rem;
+}
+
+/* LookBook section */
+.lookbook-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+.lookbook-card:hover {
+    transform: translateY(-5px);
+}
+
+.status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.status.in-stock {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status.low-stock {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status.sold-out {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+
+/* CONTACT SECTION */
+#contact iframe {
+  border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+  font-size: 0.85rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .lookbook-card img {
+    height: 250px;
+  }
+}

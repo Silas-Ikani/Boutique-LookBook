@@ -26,6 +26,9 @@ img {
 
 
 /* Navbar */
+.logo {
+  width: 100px;
+}
 .nav-link {
     color: #333;
     margin-left: 1.2rem;

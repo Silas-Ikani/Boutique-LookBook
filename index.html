@@ -12,27 +12,35 @@
   <body>
     <!-- NAVBAR -->
     <header class="bg-white shadow-sm sticky-top">
-      <nav class="container d-flex justify-content-between align-items-center py-3">
-        <div class="logo">
-          <!-- <h1 class="m-0">WEARZ</h1> -->
-          <img src="./Assets/Img/logo.png" alt="" class="m-0 img-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./Assets/Img/logo.png" alt="Aurastylez.com logo" class="logo" />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#boutiqueNavbar" aria-controls="boutiqueNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="boutiqueNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#lookbook">Lookbook</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
         </div>
-        <ul class="nav">
-          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-          <li class="nav-item">
-            <a href="#lookbook" class="nav-link">Lookbook</a>
-          </li>
-          <li class="nav-item">
-            <a href="#contact" class="nav-link">Contact</a>
-          </li>
-        </ul>
       </nav>
     </header>
 
     <!-- HERO -->
     <section class="hero-section py-5 text-center">
       <div class="container">
-        <h2 class="display-5 fw-bold">Style in Stock. Always.</h2>
+        <h2 class="display-4 fw-bold">Style in Stock. Always.</h2>
         <p class="lead">
           Browse current pieces, check availability, and buy via WhatsApp in one
           tap.
@@ -51,14 +59,14 @@
                     <span class="underline"></span>
                 </h3>
                 <p>
-                    <strong>WEARZ</strong> is your visual guide to style. 
+                    <strong>AURA<span>STYLEZ</span></strong> is your visual guide to style. 
                     Browse our constantly updated lookbook for outfit ideas and the latest trends, all available to shop directly.
                 </p>
                 <p>
                     Discover your next favorite outfit with [Boutique Name]'s interactive lookbook. We've created a visual journey through our latest collections, 
                 making it easy to find inspiration and shop the looks you love. We're passionate about bringing you the best in fashion, styled for real life.
                 </p>
-                <a href="#contact" class="btn look-btn rounded-3">Shop Now</a>
+                <a href="#contact" class="btn look-btn rounded-3 mb-3">Shop Now</a>
             </div>
             <div class="col-md-6">
                 <img src="./Assets/Img/about-img.jpg" alt="About" class="img-fluid rounded-5"/>
@@ -81,7 +89,7 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="py-5">
+    <section id="contact" class="py-5 contact">
       <div class="container">
         <h3 class="text-center mb-5">
             Contact / Visit Us
@@ -89,10 +97,17 @@
         </h3>
         <div class="row">
           <div class="col-md-6">
-            <p><strong>Address:</strong> 123 Igwuruta road Rumukwurusi, PH, Rivers State.</p>
-            <p><strong>Hours:</strong> Mon–Sat: 10AM – 7PM</p>
-            <p><strong>Phone:</strong> +234 800 000 0000</p>
-            <p><strong>Instagram:</strong> @yourboutique</p>
+            <p><i class="fas fa-map-marker-alt me-1 icon"></i><strong>Address:</strong> 123 Igwuruta road Rumukwurusi, PH, Rivers State.</p>
+            <p><i class="far fa-clock me-1 icon"></i><strong>Hours:</strong> Mon–Sat: 10AM – 7PM</p>
+            <p><i class="fas fa-phone me-1 icon"></i><strong>Phone:</strong> +234 800 000 0000</p>
+            <div class="social-links mb-4">
+              <a href="" class="icon-container">
+                <i class="fab fa-instagram fa-1x"></i>
+              </a>
+              <a href="" class="icon-container">
+                <i class="fab fa-whatsapp fa-1x"></i>
+              </a>
+            </div>
           </div>
           <div class="col-md-6">
             <iframe src="https://maps.google.com/maps?q=lagos&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="200" frameborder="0"></iframe>
@@ -103,7 +118,7 @@
 
     <!-- FOOTER -->
     <footer class="text-center bg-dark text-white py-3">
-      <small>&copy; 2025 WEARZ. All rights reserved.</small>
+      <small>&copy; 2025 <strong>AURASTYLEZ</strong>. All rights reserved.</small>
     </footer>
 
     <!-- BOOTSTRAP & JS -->

@@ -24,16 +24,21 @@
     <h4>Add New Item</h4>
     <form id="item-form">
       <input type="text" id="item-name" placeholder="Item Name" required />
-      <input type="text" id="item-image" placeholder="Image URL" required />
-      <img id="image-preview" src="" alt="Image Preview" style="max-width: 300px; display: none; margin-top: 10px;" />
+
+      <!-- Image file upload -->
+      <input type="file" id="item-image" accept="image/*" required />
+      <img id="image-preview" alt="Image Preview" style="max-width: 300px; display: none; margin-top: 10px;" />
+
       <select id="item-status">
         <option value="in-stock">In Stock</option>
         <option value="low-stock">Low Stock</option>
         <option value="sold-out">Sold Out</option>
       </select>
+
       <input type="text" id="item-link" placeholder="WhatsApp Link" required />
       <button type="submit">Add Item</button>
     </form>
+
 
     <hr />
 

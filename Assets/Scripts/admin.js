@@ -89,3 +89,47 @@ imageInput.addEventListener("input", () => {
     imagePreview.style.display = "none";
   }
 });
+
+// Image file upload preview (for file uploads instead of URL input)
+const imageFileInput = document.getElementById("item-image");
+
+if (imageFileInput.type === "file") {
+  imageFileInput.addEventListener("change", function () {
+    const file = imageFileInput.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      imagePreview.src = e.target.result;
+      imagePreview.style.display = "block";
+
+      // Temporarily store image in memory
+      imageFileInput.dataset.base64 = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  });
+
+  // Override form submit only if file input is active
+  itemForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("item-name").value;
+    const image =
+      imageFileInput.dataset.base64 || document.getElementById("item-image").value;
+    const status = document.getElementById("item-status").value;
+    const link = document.getElementById("item-link").value;
+
+    const newItem = { name, image, status, link };
+    const items = JSON.parse(localStorage.getItem("lookbookItems")) || [];
+
+    items.push(newItem);
+    localStorage.setItem("lookbookItems", JSON.stringify(items));
+
+    itemForm.reset();
+    imagePreview.style.display = "none";
+    imagePreview.src = "";
+    delete imageFileInput.dataset.base64;
+
+    loadItems();
+  });
+}

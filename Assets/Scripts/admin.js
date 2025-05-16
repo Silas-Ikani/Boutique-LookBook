@@ -1,4 +1,6 @@
 const PASSWORD = "boutique123"; // change this to whatever the boutique owner wants
+const imageFileInput = document.getElementById("item-image");
+
 
 // Elements
 const loginScreen = document.getElementById("login-screen");
@@ -23,12 +25,15 @@ function login() {
 function loadItems() {
   const items = JSON.parse(localStorage.getItem("lookbookItems")) || [];
   itemsTable.innerHTML = "";
+
   items.forEach((item, index) => {
     const row = document.createElement("tr");
     row.innerHTML = `
+      <td><img src="${item.image}" alt="${item.name}" style="max-width: 100px;" /></td>
       <td>${item.name}</td>
       <td>${item.status}</td>
       <td>
+        <a href="${item.link}" target="_blank">Order</a>
         <button onclick="editItem(${index})">Edit</button>
         <button onclick="deleteItem(${index})">Delete</button>
       </td>
@@ -37,23 +42,41 @@ function loadItems() {
   });
 }
 
+
 // Save item to localStorage
 itemForm.addEventListener("submit", function (e) {
   e.preventDefault();
+
   const name = document.getElementById("item-name").value;
-  const image = document.getElementById("item-image").value;
   const status = document.getElementById("item-status").value;
   const link = document.getElementById("item-link").value;
 
-  const newItem = { name, image, status, link };
-  const items = JSON.parse(localStorage.getItem("lookbookItems")) || [];
+  const file = imageFileInput.files[0];
 
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      const image = e.target.result; // base64 string
+      saveItem({ name, image, status, link });
+    };
+    reader.readAsDataURL(file);
+  } else {
+    const image = imageFileInput.value.trim();
+    saveItem({ name, image, status, link });
+  }
+});
+
+function saveItem(newItem) {
+  const items = JSON.parse(localStorage.getItem("lookbookItems")) || [];
   items.push(newItem);
   localStorage.setItem("lookbookItems", JSON.stringify(items));
-
   itemForm.reset();
+  imagePreview.style.display = "none";
+  imagePreview.src = "";
   loadItems();
-});
+}
+
+
 
 // Delete item
 function deleteItem(index) {
@@ -63,7 +86,7 @@ function deleteItem(index) {
   loadItems();
 }
 
-// Edit item (loads values into form)
+// Edit item (loads values back into the form)
 function editItem(index) {
   const items = JSON.parse(localStorage.getItem("lookbookItems")) || [];
   const item = items[index];
@@ -91,7 +114,6 @@ imageInput.addEventListener("input", () => {
 });
 
 // Image file upload preview (for file uploads instead of URL input)
-const imageFileInput = document.getElementById("item-image");
 
 if (imageFileInput.type === "file") {
   imageFileInput.addEventListener("change", function () {
